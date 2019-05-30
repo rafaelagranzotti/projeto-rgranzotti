@@ -8,10 +8,10 @@ author:
 # output: html_document
 
 output:
-  word_document:
-    reference_docx: scripts/template.docx
-bibliography: library/My-Collection.bib
-csl: library/freshwater-biology.csl
+  html_document:
+    toc: true
+    toc_float: true
+
 ---
 
 ```{r pacotes, include=F}
