@@ -1,0 +1,104 @@
+---
+title: Paper da Rafa
+author: 
+- Rafaela Vendrametto Granzotti^1^\*; Segundo autor^1^
+- ^1^*Universidade Federal de Goiás*
+- \* rafaelagranzotti@gmail.com
+
+# output: html_document
+
+output:
+  word_document:
+    reference_docx: scripts/template.docx
+bibliography: library/My-Collection.bib
+csl: library/freshwater-biology.csl
+---
+
+```{r pacotes, include=F}
+#se o pacote estiver instalado, carregue; se nao, instale e carregue.
+if (!require('vegan')) install.packages('vegan')
+#if (!require('minimalTemplate')) install.packages('minimalTemplate')
+if (!require('knitr')) install.packages('knitr')
+```
+
+
+# Resumo
+
+<!-- Como citar os trabalhos  -->
+O trabalho da pessoa disse isso [@Bailey2001; @Blackburn2006], mas @Blackburn2006 disseram o contrário
+
+# Intro
+
+<!-- Eu adoro *bolo* de **cenoura**.Essa frase não vai aparecer no html -->
+*italico*  **negrito** ~~riscado~~
+~sobescrito~  H~2~O
+nome^aoquadrado^
+
+- Item1 - lista
+  - Item1.1
+
++ Item2 - 
+
+1.Item3
+
+2.Item4
+
+# M&M
+
+## Coleta de dados
+
+## Análise de dados
+
+```{r, echo=F, eval=T, results='asis'}
+data("mtcars")
+model <- lm(mpg~carb, mtcars)
+summary(model)
+```
+
+# Resultados 
+
+**Mostrando o código e o plot**
+```{r}
+plot(mtcars$carb, mtcars$mpg)
+```
+
+<!-- echo = mostra o código ou não;  -->
+<!-- eval = mostrao resultado ou nao -->
+
+```{r caixa do plot2,echo=FALSE, eval=TRUE,fig.cap="Figura 1: regressão linear"}
+plot(mtcars$carb, mtcars$mpg)
+
+```
+
+
+
+
+**Mostrando uma tabela** 
+
+
+
+A tabela com dados de carros *mtcars* possui `r nrow(mtcars)` linhas e `r ncol(mtcars)` colunas.
+
+
+
+
+Tabela 1. Dados de carros
+
+```{r tabela, echo=FALSE, eval=T}
+data(mtcars)
+kable(mtcars)
+```
+
+
+
+
+
+# Discussão
+
+A conclusão é essa
+
+<!-- Para chamar a figura de fora do R -->
+![](figuras/meuplot.tiff)
+
+
+# Referências
