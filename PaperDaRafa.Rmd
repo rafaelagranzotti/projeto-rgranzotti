@@ -29,6 +29,8 @@ O trabalho da pessoa disse isso [@Bailey2001; @Blackburn2006], mas @Blackburn200
 
 # Intro
 
+Primeira frase.
+
 <!-- Eu adoro *bolo* de **cenoura**.Essa frase não vai aparecer no html -->
 *italico*  **negrito** ~~riscado~~
 ~sobescrito~  H~2~O
